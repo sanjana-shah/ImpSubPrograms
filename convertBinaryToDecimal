@@ -1,0 +1,22 @@
+String messageFromBinaryCode(String code) {
+
+int i=0;
+int sum=0;
+char asciii=' ';
+String result="";
+while(i<code.length())
+{
+    sum=0;
+    for(int j=7;j>=0;j--)
+    {
+      if(code.charAt(i)=='1')
+        sum+=(int)Math.pow(2.0,j);  
+        i++;
+    }
+    asciii=(char)sum;
+    result+=asciii;
+    
+}
+
+return result;
+}
